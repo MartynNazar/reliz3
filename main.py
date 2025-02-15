@@ -31,7 +31,14 @@ main_line.addWidget(result_input)
 main_line.addWidget(vidpovid)
 
 
+def get_result():
+    response = requests.get()
+    data = response.json()
+    print(data)
+    print(data[0]["rate"])
 
+
+vidpovid.clicked.connect(get_result)
 
 
 window.setLayout(main_line)
