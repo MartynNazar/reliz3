@@ -6,20 +6,28 @@ window = QWidget()
 
 
 
-val1 = QLineEdit("Валюта з якої перевести")
-val2 = QLineEdit("Валюта в яку перевести")
-kilkist = QLineEdit("Кількість")
-result = QLineEdit("Результат")
+val1_input = QLineEdit()
+val1_input.setPlaceholderText("Валюта з якої перевести")
+
+val2_input = QLineEdit()
+val2_input.setPlaceholderText("Валюта в яку перевести")
+
+cilckist_input = QLineEdit()
+cilckist_input.setPlaceholderText("Введіть кількість")
+
+result_input = QLineEdit()
+result_input.setPlaceholderText("Результат")
+
 vidpovid = QPushButton("Конвертація")
 
 
 
 
 main_line = QVBoxLayout()
-main_line.addWidget(val1)
-main_line.addWidget(val2)
-main_line.addWidget(kilkist)
-main_line.addWidget(result)
+main_line.addWidget(val1_input)
+main_line.addWidget(val2_input)
+main_line.addWidget(cilckist_input)
+main_line.addWidget(result_input)
 main_line.addWidget(vidpovid)
 
 
