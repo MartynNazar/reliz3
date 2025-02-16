@@ -1,3 +1,4 @@
+import requests
 from PyQt6.QtWidgets import *
 
 
@@ -56,7 +57,16 @@ main_line.addWidget(vidpovid)
 
 
 
+def get_result():
+    url = "https://api.coingecko.com/api/v3/simple/price"
+    params = {
+        "ids": val1_input.text(),
+        "vs_currencies": val2_input.text()
+    }
 
+    response = requests.get(url, params=params)
+    data = response.json()
+    print(data[val1_input.text()][val2_input.text()])
 
 vidpovid.clicked.connect(get_result)
 

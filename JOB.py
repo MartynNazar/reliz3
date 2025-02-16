@@ -1,10 +1,11 @@
 import requests
 
-def get_result():
-    response = requests.get(
-        f"https://api.coingecko.com/api/v3/simple/price"
-    )
-    data = response.json()
-    print(data)
+url = "https://api.coingecko.com/api/v3/simple/price"
+params = {
+    "ids": "bitcoin",
+    "vs_currencies": "usd,uah"
+}
 
-vidpovid.clicked.connect(get_result)
+response = requests.get(url, params=params)
+data = response.json()
+print(data)
