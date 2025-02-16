@@ -1,8 +1,32 @@
-from PyQt5.QtWidgets import *
-import requests
+from PyQt6.QtWidgets import *
+
 
 app = QApplication([])
 window = QWidget()
+
+
+
+app.setStyleSheet("""
+        QWidget {
+            background: #76e0ab;
+        }
+        
+        QPushButton
+        {
+            background-color: #d27edd;
+            border-style: dashed double none;
+            font-family: cursive;
+            padding: 7px;
+            font-size: 25px;
+            color: black;
+            border-width: 7px;
+            border-color: green;
+            border-radius:30px;
+            
+            
+    
+""")
+
 
 
 
@@ -31,11 +55,7 @@ main_line.addWidget(result_input)
 main_line.addWidget(vidpovid)
 
 
-def get_result():
-    response = requests.get()
-    data = response.json()
-    print(data)
-    print(data[0]["rate"])
+
 
 
 vidpovid.clicked.connect(get_result)
