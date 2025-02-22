@@ -9,22 +9,32 @@ window = QWidget()
 
 app.setStyleSheet("""
         QWidget {
-            background: #76e0ab;
+            background: linear-gradient(135deg, #282c34, #3e4451);
+            color: #8be9fd;
+            font-family: sans-serif;
         }
         
         QPushButton
         {
-            background-color: #d27edd;
-            border-style: dashed double none;
-            font-family: cursive;
-            padding: 7px;
-            font-size: 25px;
-            color: black;
-            border-width: 7px;
-            border-color: green;
-            border-radius:30px;
+            background-color:  #3e4451;
+            border-style: solid;
+            font-family: sans-serif;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #8be9fd;
+            border-width: 2px ;
+            border-color: #61afef;
+            border-radius:5px;
+            box-shadow: 0 0 10px #61afef, 0 0 20px #8be9fd;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
             
-            
+        }
+        
+        
+        QPushButton:hover 
+        {
+             background-color: #52596a;
+             box-shadow: 0 0 15px #8be9fd, 0 0 25px #a4ffff;
     
 """)
 
