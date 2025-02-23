@@ -140,7 +140,7 @@ def get_result():
     response = requests.get(url, params=params)
     data = response.json()
     bit = print(data[val1_input.text()][val2_input.text()])
-    result_input.setText(bit*cilckist_input)
+    result_input.setText(bit)
 
 vidpovid.clicked.connect(get_result)
 
