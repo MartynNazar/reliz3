@@ -9,7 +9,7 @@ window = QWidget()
 
 app.setStyleSheet("""
         QWidget {
-            background: linear-gradient(135deg, #282c34, #3e4451);
+            background: #2d292b;
             color: #8be9fd;
             font-family: fantasy;
         }
